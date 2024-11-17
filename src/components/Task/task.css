@@ -1,0 +1,13 @@
+.task-container {
+    padding: 1px 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #e6e6e6;
+    margin-bottom: 3px;
+    text-align: start;
+    cursor: grab;
+}
+
+.task-container:active {
+    cursor: grabbing;
+}

@@ -1,0 +1,16 @@
+.column-header {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+
+.column-header button {
+    border: none;
+    border-radius: 10px;
+}
+
+.column {
+    height: 100%;
+    padding: 5px;
+}
