@@ -1,0 +1,39 @@
+.add-task-button {
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #875df9;
+    color: #fff;
+}
+
+.new-task-container {
+    border-radius: 10px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.body input{
+    width: 100%;
+    margin-bottom: 10px;
+    height: 25px;
+}
+
+.footer {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.footer button {
+    padding: 8px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#add {
+    background-color: #875df9;
+    color: #fff;
+}

@@ -6,6 +6,7 @@
     margin-bottom: 3px;
     text-align: start;
     cursor: grab;
+    flex-grow: 0;
 }
 
 .task-container:active {
