@@ -19,13 +19,22 @@ const Column = ({ title, type, tasks, setTasks }) => {
                 >+</button>
             </div>
 
-            {tasksByType.map((t) => {
-                return <Task key={t.id}
-                    text={t.text}
-                    type={t.type}
-                />
-            })}
-            {addNewTask && <AddTask setAddNewTask={setAddNewTask} type={type} setTasks={setTasks} />}
+            <div className='tasks-container'>
+                <div>
+                    {tasksByType.map((t) => {
+                        return <Task key={t.id}
+                            text={t.text}
+                            type={t.type}
+                        />
+                    })}
+                </div>
+                <div>
+                    {addNewTask && <AddTask
+                        setAddNewTask={setAddNewTask}
+                        type={type}
+                        setTasks={setTasks} />}
+                </div>
+            </div>
         </div>
     )
 }

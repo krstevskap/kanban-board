@@ -1,6 +1,27 @@
 .column-header {
     display: flex;
     justify-content: center;
-    gap: 20px;
     align-items: center;
+    gap: 1em;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 100%;
+}
+
+.add-task-button {
+    border: none;
+    border-radius: 50%;
+    padding: 0.2em 0.5em;
+    cursor: pointer;
+    background-color: #875df9;
+    color: #fff;
+}
+
+.tasks-container {
+    display: flex;
+    flex-direction: column;
 }
