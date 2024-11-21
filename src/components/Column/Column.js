@@ -9,6 +9,10 @@ const Column = ({ title, type, tasks, setTasks }) => {
 
     const [addNewTask, setAddNewTask] = useState(false);
 
+    const deleteTask = (id) => {
+        setTasks(tasks.filter(t => t.id !== id));
+    }
+
     return (
         <div className='column'>
             <div className='column-header'>
@@ -23,8 +27,10 @@ const Column = ({ title, type, tasks, setTasks }) => {
                 <div>
                     {tasksByType.map((t) => {
                         return <Task key={t.id}
+                            id={t.id}
                             text={t.text}
                             type={t.type}
+                            deleteTask={deleteTask}
                         />
                     })}
                 </div>

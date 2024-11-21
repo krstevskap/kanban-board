@@ -12,3 +12,21 @@
 .task:active {
     cursor: grabbing;
 }
+
+.buttons{
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.3em;
+}
+
+.delete-button, .edit-button {
+    cursor: pointer;
+}
+
+.delete-button {
+    color: rgb(204, 0, 0);
+}
+
+.edit-button {
+    color: rgb(0, 71, 194);
+}
