@@ -1,20 +1,20 @@
-import React, {useState} from 'react';
+import React, { useState, useEffect } from 'react';
 import Tasks from '../Tasks/Tasks';
 import ProgressBar from '../ProgressBar/ProgressBar';
 import './board.css';
 
 const Board = () => {
 
-    const TASKS = [
-        { id: 1, text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", type: "toDo" },
-        { id: 2, text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", type: "toDo" },
-        { id: 3, text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", type: "toDo" },
-        { id: 4, text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", type: "inProgress" },
-        { id: 5, text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", type: "inProgress" },
-        { id: 6, text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", type: "done" },
-    ];
+    const loadTasks = () => {
+        const savedTasks = localStorage.getItem('tasks');
+        return savedTasks ? JSON.parse(savedTasks) : [];
+    };
 
-    const [tasks, setTasks] = useState(TASKS);
+    const [tasks, setTasks] = useState(loadTasks);
+
+    useEffect(() => {
+        localStorage.setItem('tasks', JSON.stringify(tasks));
+    }, [tasks]);
 
     return (
         <div className='board-container'>
