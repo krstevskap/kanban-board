@@ -2,7 +2,7 @@ import React from 'react';
 import Column from '../Column/Column';
 import './tasks.css';
 
-const Tasks = ({tasks, setTasks}) => {
+const Tasks = ({ tasks, setTasks }) => {
     return (
         <div className='column-container'>
             <Column
