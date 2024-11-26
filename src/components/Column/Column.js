@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import './column.css';
 import Task from '../Task/Task';
 import AddTask from '../AddTask/AddTask';
+import { Droppable } from '@hello-pangea/dnd';
+import './column.css';
 
 const Column = ({ title, type, tasks, setTasks }) => {
 
@@ -30,17 +31,24 @@ const Column = ({ title, type, tasks, setTasks }) => {
       </div>
 
       <div className='tasks-container'>
-        <div>
-          {tasksByType.map((t) => {
-            return <Task key={t.id}
-              id={t.id}
-              text={t.text}
-              type={t.type}
-              deleteTask={deleteTask}
-              editTask={editTask}
-            />
-          })}
-        </div>
+        <Droppable droppableId={type}>
+          {(provided) => (
+            <div {...provided.droppableProps} ref={provided.innerRef}>
+              {tasksByType.map((t, index) => {
+                return <Task key={t.id}
+                  id={t.id}
+                  text={t.text}
+                  type={t.type}
+                  deleteTask={deleteTask}
+                  editTask={editTask}
+                  index={index}
+                />
+              })}
+              <span style={{ display: 'none' }}>{provided.placeholder}</span>
+            </div>
+          )}
+        </Droppable>
+
         <div>
           {addNewTask && <AddTask
             setAddNewTask={setAddNewTask}
