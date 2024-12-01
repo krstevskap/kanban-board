@@ -6,7 +6,11 @@
     margin-bottom: 0.5em;
     text-align: start;
     cursor: grab;
-    flex-grow: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
 }
 
 .task:active {
@@ -15,7 +19,6 @@
 
 .buttons{
     display: flex;
-    justify-content: flex-end;
     gap: 0.3em;
 }
 
