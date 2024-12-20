@@ -4,7 +4,7 @@ import AddTask from "../AddTask/AddTask";
 import { Droppable } from "@hello-pangea/dnd";
 import "./column.css";
 
-const Column = ({ title, type, tasks, setTasks }) => {
+const Column = ({ title, type, tasks, setTasks, color }) => {
   const tasksByType = tasks.filter((t) => t.type === type);
 
   const [addNewTask, setAddNewTask] = useState(false);
@@ -22,19 +22,24 @@ const Column = ({ title, type, tasks, setTasks }) => {
   return (
     <div className="column">
       <div className="column-header">
-        <h3>{title}</h3>
-        <button
-          onClick={() => {
-            setAddNewTask(true);
-            setEditingTask(null);
-          }}
-          className="add-task-button"
-        >
-          +
-        </button>
+        <div className="title">
+          <button
+            onClick={() => {
+              setAddNewTask(true);
+              setEditingTask(null);
+            }}
+            className="add-task-button"
+          >
+            +
+          </button>
+          <p>{title}</p>
+        </div>
+        <div className="number-of-tasks" style={{ color: color }}>
+          {tasksByType.length}
+        </div>
       </div>
 
-      <div className="tasks-container">
+      <div className="filtered-tasks-container">
         <Droppable droppableId={type}>
           {(provided) => (
             <div {...provided.droppableProps} ref={provided.innerRef}>

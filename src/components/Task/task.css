@@ -1,8 +1,8 @@
 .task {
     padding: 0.75em;
     border: none;
-    border-radius: 1em;
-    background-color: #f0f0f0;
+    border-radius: 0.3em;
+    background-color: #FEFFFE;
     margin-bottom: 0.5em;
     text-align: start;
     cursor: grab;
@@ -17,12 +17,13 @@
     cursor: grabbing;
 }
 
-.buttons{
+.buttons {
     display: flex;
     gap: 0.3em;
 }
 
-.delete-button, .edit-button {
+.delete-button,
+.edit-button {
     cursor: pointer;
 }
 

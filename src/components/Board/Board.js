@@ -16,7 +16,11 @@ const Board = () => {
 
   return (
     <div className="board-container">
-      <div className="left-column">
+      <div className="board-header">
+        <h2>Hi,</h2>
+        <p>Let's finish your tasks today!</p>
+      </div>
+      <div className="tasks-container">
         <Tasks tasks={tasks} setTasks={setTasks} />
       </div>
     </div>

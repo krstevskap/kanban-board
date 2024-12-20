@@ -34,18 +34,21 @@ const AddTask = ({ setAddNewTask, type, setTasks, editingTask }) => {
 
   return (
     <div className="new-task-container">
+      <div className="new-task-header">
+        <h3>Create new task</h3>
+      </div>
       <form onSubmit={handleSubmit}>
         <div className="body">
-          <input
+          <textarea
             autoFocus
             value={text || ""}
             onChange={(e) => setText(e.target.value)}
-          ></input>
+          ></textarea>
         </div>
-        <div className="footer">
+        <div className="new-task-footer">
           <button id="add" type="submit">
             {" "}
-            {editingTask ? "Edit" : "Add"}{" "}
+            {editingTask ? "Edit task" : "Add new task"}{" "}
           </button>
           <button id="cancel" onClick={() => setAddNewTask(false)}>
             Cancel

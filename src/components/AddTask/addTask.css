@@ -1,33 +1,50 @@
-
-
 .new-task-container {
-    border-radius: 10px;
-    background-color: #fff;
+    border-radius: 0.3em;
+    background-color: #FEFFFE;
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    gap: 1em;
+    padding: 1em;
 }
 
-.body input{
+.new-task-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.body textarea {
     width: 100%;
     margin-bottom: 10px;
-    height: 25px;
+    height: 5em;
+    border-radius: 0.3em;
+    border: 1px solid #ccc;
+    resize: none;
 }
 
-.footer {
+.new-task-footer {
     display: flex;
-    gap: 15px;
+    gap: 1em;
     justify-content: center;
 }
 
-.footer button {
-    padding: 8px;
+.new-task-footer button {
+    padding: 0.5em;
     border: none;
-    border-radius: 10px;
+    border-radius: 0.3em;
     cursor: pointer;
+    flex: 1;
 }
 
 #add {
-    background-color: #875df9;
+    background-color: #2E7CFE;
     color: #fff;
+}
+
+#cancel {
+    background-color: #efefef;
+    border: none;
+}
+
+#cancel:hover {
+    cursor: pointer;
 }

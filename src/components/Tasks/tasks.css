@@ -5,7 +5,7 @@
     padding: 1em;
 }
 
-.column-container > div {
+.column-container>div {
     flex: 1;
 }
 

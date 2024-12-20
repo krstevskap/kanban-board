@@ -1,33 +1,44 @@
-.column-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1em;
-}
-
 .column {
     display: flex;
     flex-direction: column;
     gap: 1em;
 }
 
-.add-task-button {
-    border: none;
-    border-radius: 50%;
-    padding: 0.2em 0.5em;
-    cursor: pointer;
-    background-color: #875df9;
-    color: #fff;
+.column-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em;
+    gap: 1em;
+    background-color: #FEFFFE;
+    border-radius: 0.3em;
 }
 
-.tasks-container {
+.title {
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+}
+
+.add-task-button {
+    border: none;
+    cursor: pointer;
+    color: #7B8EA5;
+    background: none;
+    font-size: 1.8rem;
+}
+
+.filtered-tasks-container {
     display: flex;
     flex-direction: column;
+    border-radius: 0.3em;
     gap: 1em;
 }
 
 @media (max-width: 700px) {
     .column {
-        padding: 0 1em;
+        padding: 0 0.3em;
     }
 }

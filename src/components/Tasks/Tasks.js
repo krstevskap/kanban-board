@@ -49,18 +49,26 @@ const Tasks = ({ tasks, setTasks }) => {
   return (
     <DragDropContext onDragEnd={handleOnDragEnd}>
       <div className="column-container">
-        <Column title="To do" type="toDo" tasks={tasks} setTasks={setTasks} />
+        <Column
+          title="To do"
+          type="toDo"
+          tasks={tasks}
+          setTasks={setTasks}
+          color="#FB6177"
+        />
         <Column
           title="In progress"
           type="inProgress"
           tasks={tasks}
           setTasks={setTasks}
+          color="#FED070"
         />
         <Column
           title="Completed"
           type="done"
           tasks={tasks}
           setTasks={setTasks}
+          color="#73DDA0"
         />
       </div>
     </DragDropContext>
