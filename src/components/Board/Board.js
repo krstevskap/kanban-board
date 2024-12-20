@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Tasks from "../Tasks/Tasks";
-import ProgressBar from "../ProgressBar/ProgressBar";
 import "./board.css";
 
 const Board = () => {
@@ -19,9 +18,6 @@ const Board = () => {
     <div className="board-container">
       <div className="left-column">
         <Tasks tasks={tasks} setTasks={setTasks} />
-      </div>
-      <div className="right-column">
-        <ProgressBar tasks={tasks} />
       </div>
     </div>
   );
