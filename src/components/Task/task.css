@@ -2,7 +2,7 @@
     padding: 0.75em;
     border: none;
     border-radius: 0.3em;
-    background-color: #FEFFFE;
+    background-color: var(--primary-light);
     margin-bottom: 0.5em;
     text-align: start;
     cursor: grab;
@@ -11,6 +11,10 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 1em;
+}
+
+#dark .task {
+    background-color: var(--primary-dark);
 }
 
 .task:active {
@@ -25,12 +29,9 @@
 .delete-button,
 .edit-button {
     cursor: pointer;
+    color: var(--text-light);
 }
 
-.delete-button {
-    color: rgb(204, 0, 0);
-}
-
-.edit-button {
-    color: rgb(0, 71, 194);
+#dark .delete-button, #dark .edit-button {
+    color: var(--text-dark);
 }

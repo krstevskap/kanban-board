@@ -1,23 +1,40 @@
 .board-container {
     display: flex;
+    min-height: 100vh;
     flex-wrap: wrap;
     flex-direction: column;
     padding: 1.5em;
     gap: 1em;
+    background-color: var(--primary-light);
+    color: var(--text-light);
+}
+
+#dark .board-container {
+    background-color: var(--primary-dark);
+    color: var(--text-dark);
 }
 
 .board-header {
     display: flex;
-    flex-direction: column;
-    gap: 0.5em;
+    justify-content: space-between;
 }
 
-.board-header p {
-    color: #2E7CFE;
+.header-right {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.header-left p {
+    color: var(--blue);
 }
 
 .tasks-container {
     min-height: 80vh;
-    background-color: #F8FBFB;
+    background-color: var(--secondary-light);
     border-radius: 0.3em;
+}
+
+#dark .tasks-container {
+    background-color: var(--secondary-dark);
 }

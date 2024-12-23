@@ -41,6 +41,7 @@ const AddTask = ({ setAddNewTask, type, setTasks, editingTask }) => {
         <div className="body">
           <textarea
             autoFocus
+            required
             value={text || ""}
             onChange={(e) => setText(e.target.value)}
           ></textarea>

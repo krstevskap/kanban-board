@@ -10,8 +10,12 @@
     align-items: center;
     padding: 0.5em;
     gap: 1em;
-    background-color: #FEFFFE;
+    background-color: var(--primary-light);
     border-radius: 0.3em;
+}
+
+#dark .column-header {
+    background-color: var(--primary-dark);
 }
 
 .title {
@@ -25,9 +29,12 @@
 .add-task-button {
     border: none;
     cursor: pointer;
-    color: #7B8EA5;
+    color: var(--grey);
     background: none;
-    font-size: 1.8rem;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .filtered-tasks-container {

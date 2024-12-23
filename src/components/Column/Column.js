@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Task from "../Task/Task";
 import AddTask from "../AddTask/AddTask";
 import { Droppable } from "@hello-pangea/dnd";
+import { FaPlus } from "react-icons/fa";
 import "./column.css";
 
 const Column = ({ title, type, tasks, setTasks, color }) => {
@@ -21,7 +22,10 @@ const Column = ({ title, type, tasks, setTasks, color }) => {
 
   return (
     <div className="column">
-      <div className="column-header">
+      <div
+        className="column-header"
+        style={{ borderBottom: `2px solid ${color}` }}
+      >
         <div className="title">
           <button
             onClick={() => {
@@ -30,7 +34,7 @@ const Column = ({ title, type, tasks, setTasks, color }) => {
             }}
             className="add-task-button"
           >
-            +
+            <FaPlus />
           </button>
           <p>{title}</p>
         </div>

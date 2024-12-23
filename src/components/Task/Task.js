@@ -1,6 +1,6 @@
 import React from "react";
-import { FaEdit } from "react-icons/fa";
-import { MdDelete } from "react-icons/md";
+import { MdEdit } from "react-icons/md";
+import { MdDeleteOutline } from "react-icons/md";
 import { Draggable } from "@hello-pangea/dnd";
 import "./task.css";
 
@@ -17,11 +17,11 @@ const Task = ({ id, text, type, deleteTask, editTask, index }) => {
         >
           <p>{text}</p>
           <div className="buttons">
-            <FaEdit
+            <MdEdit
               className="edit-button"
               onClick={() => editTask(id, text)}
             />
-            <MdDelete
+            <MdDeleteOutline
               className="delete-button"
               onClick={() => deleteTask(id)}
             />

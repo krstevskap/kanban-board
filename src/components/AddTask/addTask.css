@@ -1,10 +1,14 @@
 .new-task-container {
-    border-radius: 0.3em;
-    background-color: #FEFFFE;
     display: flex;
     flex-direction: column;
     gap: 1em;
     padding: 1em;
+    border-radius: 0.3em;
+    background-color: var(--primary-light);
+}
+
+#dark .new-task-container {
+    background-color: var(--primary-dark);
 }
 
 .new-task-header {
@@ -14,11 +18,18 @@
 
 .body textarea {
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 1em;
     height: 5em;
     border-radius: 0.3em;
-    border: 1px solid #ccc;
+    border: none;
     resize: none;
+    background-color: var(--secondary-light);
+    color: var(--text-light);
+}
+
+#dark .body textarea {
+    background-color: var(--secondary-dark);
+    color: var(--text-dark);
 }
 
 .new-task-footer {
@@ -33,16 +44,19 @@
     border-radius: 0.3em;
     cursor: pointer;
     flex: 1;
+    color: var(--primary-light);
+}
+
+#dark .new-task-footer button {
+    color: var(--primary-dark);
 }
 
 #add {
-    background-color: #2E7CFE;
-    color: #fff;
+    background-color: var(--blue);
 }
 
 #cancel {
-    background-color: #efefef;
-    border: none;
+    background-color: var(--grey);
 }
 
 #cancel:hover {
