@@ -8,8 +8,8 @@ A React-based task management application that allows users to create, edit, del
 - Edit existing task.
 - Delete task.
 - Drag and drop task between columns.
-- Progress bar to track the percentage of completed tasks.
 - Data persistence using browser local storage.
+- Dark mode toggle for a better user experience.
 
 ## Setup Instructions
 
