@@ -45,8 +45,14 @@ const Column = ({ title, type, tasks, setTasks, color }) => {
 
       <div className="filtered-tasks-container">
         <Droppable droppableId={type}>
-          {(provided) => (
-            <div {...provided.droppableProps} ref={provided.innerRef}>
+          {(provided, snapshot) => (
+            <div
+              {...provided.droppableProps}
+              ref={provided.innerRef}
+              className={`filtered-tasks-container ${
+                snapshot.isDraggingOver ? "dragging-over" : ""
+              }`}
+            >
               {tasksByType.map((t, index) => {
                 return (
                   <Task

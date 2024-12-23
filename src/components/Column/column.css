@@ -41,11 +41,35 @@
     display: flex;
     flex-direction: column;
     border-radius: 0.3em;
-    gap: 1em;
+    padding: 0.3em;
+    min-height: 60vh;
+    background-color: var(--secondary-light);
+}
+
+#dark .filtered-tasks-container {
+    background-color: var(--secondary-dark);
+}
+
+.filtered-tasks-container.dragging-over {
+    background-color: #efefef;
+}
+
+#dark .filtered-tasks-container.dragging-over {
+    background-color: #16161c;
 }
 
 @media (max-width: 700px) {
     .column {
         padding: 0 0.3em;
+    }
+
+    .filtered-tasks-container {
+        padding: 0.3em;
+        min-height: 80px;
+        background-color: var(--secondary-light);
+    }
+
+    #dark .filtered-tasks-container {
+        background-color: var(--secondary-dark);
     }
 }

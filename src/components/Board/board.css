@@ -38,3 +38,13 @@
 #dark .tasks-container {
     background-color: var(--secondary-dark);
 }
+
+@media (max-width: 700px) {
+    .tasks-container {
+        background-color: var(--primary-light);
+    }
+
+    #dark .tasks-container {
+        background-color: var(--primary-dark);
+    }
+}
