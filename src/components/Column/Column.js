@@ -66,21 +66,20 @@ const Column = ({ title, type, tasks, setTasks, color }) => {
                   />
                 );
               })}
+              <div>
+                {addNewTask && (
+                  <AddTask
+                    setAddNewTask={setAddNewTask}
+                    type={type}
+                    setTasks={setTasks}
+                    editingTask={editingTask}
+                  />
+                )}
+              </div>
               <span style={{ display: "none" }}>{provided.placeholder}</span>
             </div>
           )}
         </Droppable>
-
-        <div>
-          {addNewTask && (
-            <AddTask
-              setAddNewTask={setAddNewTask}
-              type={type}
-              setTasks={setTasks}
-              editingTask={editingTask}
-            />
-          )}
-        </div>
       </div>
     </div>
   );
